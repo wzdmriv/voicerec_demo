@@ -5,11 +5,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Single page demo</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/hum.css">
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
         <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="js/NoSleep.min.js"></script>
+        <script type="text/javascript" src="js/firebase.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </head>
 
@@ -19,6 +24,11 @@
                 <div class="swiper-slide">
                 </div>
                 <div class="swiper-slide">
+                    <div id="app">
+                        <button class="btn btn-danger" type="button" v-if="status=='ready'" @click="startRecording">録音を開始する</button>
+                        <button class="btn btn-primary" type="button" v-if="status=='recording'" @click="stopRecording">録音を終了する</button>
+                    </div>
+                    <script type="text/javascript" src="js/button.js"></script>
                 </div>
                 <div class="swiper-slide">
                 </div>
