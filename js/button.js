@@ -51,14 +51,15 @@ new Vue({
                 this.recorder.addEventListener('stop', () => {
   
                     const audioBlob = new Blob(this.audioData);
-                    var ref = storageRef.child('audio/'+ Math.floor(Date.now() / 1000) + this.audioExtension);
-                    storageRef.child('audio/'+ Math.floor(Date.now() / 1000) + this.audioExtension).put(audioBlob).then(function(snapshot) {
+                    var date = new Date();
+                    var timestr = date.getFullYear()+"_"+(date.getMonth()+1)+"_"+date.getDate()+"_"+date.getHours()+"_"+date.getMinutes()+"_"+date.getSeconds();
+                    storageRef.child('audio/'+ timestr + this.audioExtension).put(audioBlob).then(function(snapshot) {
                         console.log('Uploaded a blob or file!');
                     });
                     const url = URL.createObjectURL(audioBlob);
                     let a = document.createElement('a');
                     a.href = url;
-                    a.download = Math.floor(Date.now() / 1000) + this.audioExtension;
+                    a.download = timestr + this.audioExtension;
                     document.body.appendChild(a);
                     a.click();
   
