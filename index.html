@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Single page demo</title>
+        <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/hum.css">
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/NoSleep.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+
+    <body>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                </div>
+                <div class="swiper-slide">
+                </div>
+                <div class="swiper-slide">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div id="navArea">
+            <nav>
+              <div class="inner">
+                <ul>
+                  <li><div class="nav_content" onclick="downloadCSV()">Download Latest Data</div></li>
+                </ul>
+              </div>
+            </nav>
+            <div class="toggle_btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div id="mask"></div>
+        </div>
+
+
+
+        <section id="start_modalArea" class="modalArea">
+            <div id="start_modalBg" class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <br>
+                    Single Page Demo
+                    <br><br><br>
+                    <input type="button" value="Start" onclick="close_startmodal()"/>
+                    <br><br>
+                </div>
+            </div>
+        </section>
+
+        <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+        <script>var swiper = new Swiper('.swiper-container', {initialSlide: 1, pagination: {el:'.swiper-pagination'}});</script>
+    </body>
+</html>
