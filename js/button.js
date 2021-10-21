@@ -13,12 +13,14 @@ new Vue({
             this.status = 'recording';
             this.audioData = [];
             this.recorder.start();
+            document.getElementById("rec_button").style.opacity = "0.8";
   
         },
         stopRecording() {
   
             this.recorder.stop();
             this.status = 'ready';
+            document.getElementById("rec_button").style.opacity = "1";
   
         },
         getExtension(audioType) {

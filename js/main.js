@@ -44,3 +44,7 @@ function layout(){
   $('#timer').css({'font-size':thh*0.5+'px', 'top':(thh-tthh)/2+'px'});
   $('#data_circle').css({'width':circle_size+'px','height':circle_size+'px'});
 }
+
+window.onload = function() {
+  layout()
+}
