@@ -21,7 +21,6 @@ new Vue({
             this.recorder.stop();
             this.status = 'ready';
             document.getElementById("rec_button").style.opacity = "1";
-            $('#sent_modalArea').fadeIn();
   
         },
         getExtension(audioType) {
@@ -59,6 +58,7 @@ new Vue({
                     storageRef.child('audio/'+ timestr + this.audioExtension).put(audioBlob).then(function(snapshot) {
                         console.log('Uploaded a blob or file!');
                     });
+                    $('#sent_modalArea').fadeIn();
                     const url = URL.createObjectURL(audioBlob);
                     let a = document.createElement('a');
                     a.href = url;
