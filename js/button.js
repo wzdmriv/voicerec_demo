@@ -63,7 +63,7 @@ new Vue({
                     a.href = url;
                     a.download = timestr + this.audioExtension;
                     document.body.appendChild(a);
-                    a.click();
+                    //a.click();
   
                 });
                 this.status = 'ready';
