@@ -25,6 +25,9 @@ function close_startmodal(){
   noSleep.enable();
   $('#start_modalArea').fadeOut();
 }
+function close_sentmodal(){
+  $('#sent_modalArea').fadeOut();
+}
 
 
 

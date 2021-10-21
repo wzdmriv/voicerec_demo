@@ -21,6 +21,7 @@ new Vue({
             this.recorder.stop();
             this.status = 'ready';
             document.getElementById("rec_button").style.opacity = "1";
+            $('#sent_modalArea').fadeIn();
   
         },
         getExtension(audioType) {
