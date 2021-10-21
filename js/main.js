@@ -31,18 +31,17 @@ function close_startmodal(){
 function layout(){
   var ww = window.innerWidth;
   var hh = window.innerHeight;
-  var dww = document.getElementById('data_text-wrapper').clientWidth;
-  var dhh = document.getElementById('data_text-wrapper').clientHeight;
-  var ddhh = document.getElementById('data_text').clientHeight;
-  var thh = document.getElementById('timer-wrapper').clientHeight;
-  var tthh = document.getElementById('timer').clientHeight;
-  var size = Math.min(dww,dhh*2);
-  var data_size = parseInt(size*0.35);
-  var timer_bottom = parseInt(size*0.1);
-  var circle_size = parseInt(size*0.8);
-  $('#data_text').css({'font-size':data_size+'px', 'top':(dhh-ddhh)/2+'px'});
-  $('#timer').css({'font-size':thh*0.5+'px', 'top':(thh-tthh)/2+'px'});
-  $('#data_circle').css({'width':circle_size+'px','height':circle_size+'px'});
+  if(ww>500){$('.rec_button').css({
+      'height':hh + "px"
+  });
+  }else{$('.rec_button').css({
+      'height':(hh/2) + "px"
+  });
+  }
+  var rec_w =  document.getElementById( "rec_button" ).clientWidth;
+  var rec_h =  document.getElementById( "rec_button" ).clientHeight;
+  var rec_size = parseInt(Math.min(rec_w,rec_h)*0.15);
+  $('#rec_button').css({'font-size':rec_size+'px','line-height':rec_h+'px'});
 }
 
 window.onload = function() {
