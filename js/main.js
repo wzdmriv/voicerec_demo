@@ -31,13 +31,9 @@ function close_startmodal(){
 function layout(){
   var ww = window.innerWidth;
   var hh = window.innerHeight;
-  if(ww>500){$('.rec_button').css({
+  $('.rec_button').css({
       'height':hh + "px"
   });
-  }else{$('.rec_button').css({
-      'height':(hh/2) + "px"
-  });
-  }
   var rec_w =  document.getElementById( "rec_button" ).clientWidth;
   var rec_h =  document.getElementById( "rec_button" ).clientHeight;
   var rec_size = parseInt(Math.min(rec_w,rec_h)*0.15);
